@@ -6,3 +6,5 @@ LIS Class Repository
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
+Added New Section
+This is a new section
