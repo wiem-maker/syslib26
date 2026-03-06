@@ -1,40 +1,100 @@
-*Installing and Configuring PHP
+#Installing and Configuring PHP
 
-**
-Module 4 Notes 
-We installed libapache2-mod-php with the command of 
-“sudo apt install php libapache2-mod-php" 
-Then we restarted apache2 with “sudo systemctl restart apache2”  
- ***
+
+#Module 4 Notes 
+##We installed libapache2-mod-php with the command of
+ 
+'''
+sudo apt install php libapache2-mod-php
+'''
+ 
+Then we restarted apache2 with 
+
+'''
+sudo systemctl restart apache2
+'''
+
+ ###
 Then checked that apache2 had restarted and was working with 
-“systemctl status apache” 
- ***
+
+'''
+systemctl status apache
+'''
+
+ ###
 Then to check that everything went well we made a file in
- /var/www/html/ with the command of “sudo edit info.php” and then wrote  
+ /var/www/html/ with the command of 
+ 
+ '''
+ sudo edit info.php
+ '''
+ 
+  and then wrote  
+  
+'''
 “<?php 
 Phpinfo(); 
-?>” into the file before saving and checking out our browser which
+?>” 
+'''
+
+into the file before saving and checking out our browser which
  displayed a website for php 
  
-Then we got rid of the file with “sudo rm /var/www/html/info.php” 
- **
+Then we got rid of the file with 
+
+'''
+sudo rm /var/www/html/info.php
+'''
+
+ ##
  
 We changed directory to /etc/apache2/mods-available/ and then copied 
-our dir.conf file with “sudo cp dir.conf dir.conf.bak” before editing the dir.conf file with “sudo edit dir.conf” 
+our dir.conf file with 
+
+'''
+sudo cp dir.conf dir.conf.bak
+'''
+
+ before editing the dir.conf file with 
+ 
+ '''
+ sudo edit dir.conf
+ '''
+ 
 From there we changed the order of things in the file so that index.php 
 was first in the order instead of index.html 
-***
-We checked the new config with “apachectl configtest” which returned the
+###
+We checked the new config with 
+
+'''
+apachectl configtest
+'''
+
+ which returned the
  message of “Syntax Ok” 
- ***
-After that we reloaded apache2 with “sudo systemctl reload apache2” and 
-checked it with “systemctl status apache 2” 
- **
  
-We changed directory again which is more than we usually do for this 
+After that we reloaded apache2 with 
+
+'''
+sudo systemctl reload apache2
+'''
+ and checked it with 
+ 
+ '''
+ systemctl status apache 2
+ '''
+ 
+ 
+## We changed directory again which is more than we usually do for this 
 class and moved to ?ver/www/html/ and ran the command of
- “sudo edit index.php” where I then copied and pasted the following 
- code because I’m not interested in coding and knew I would mistype 
+ 
+ '''
+ sudo edit index.php
+ '''
+ 
+  where I then copied and pasted the following 
+ code because I’m not interested in coding and knew I would mistype something
+ 
  '''
 “<!DOCTYPE html> 
 <html lang="en"> 
@@ -103,5 +163,5 @@ the page so it could catch up. I've made that mistake a couple of times already
 and am not enjoying the experience of doing so. I also hadn't realized we had
 so many different directories on our virtual machines until this lesson.
 Overall, I didn't have any real issues just a minor problem that I blame myself
-for forgetting how to dix rather than anything important.
+for forgetting how to fix rather than anything important.
 
